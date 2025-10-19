@@ -1,0 +1,10 @@
+services:
+  camundaproject:
+    image: camundaproject
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - /home/cblanchet/Documents/Camunda_Project/Place_dog_images:/app/Place_dog_images
