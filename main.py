@@ -113,17 +113,9 @@ async def download_image(
     return JSONResponse({"saved_path": saved, "message": "Image saved 🐾"})
 
 
+# Allow running the script directly for quick tests
 
 if __name__ == "__main__":
-    # Allow running the script directly for quick tests
-    async def _test():
-        path = await download_and_save("dog", 300, 200, "doggo.jpeg")
-        print(f"Image saved as {path} 🐾")
 
-    asyncio.run(_test())
-
-    async def _test():
-        path = await download_and_save(300, 200, "doggo.jpeg")
-        print(f"Image saved as {path} 🐾")
-
-    asyncio.run(_test())
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
