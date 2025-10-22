@@ -7,4 +7,4 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - /home/cblanchet/Documents/Camunda_Project/Place_dog_images:/app/Place_dog_images
+      - /home/cblanchet/Documents/Camunda_Project/Place_images:/app/Place_images
